@@ -7,6 +7,7 @@ from cryptography.fernet import Fernet
 
 DATA_DIR = Path(os.getenv("PQ_DATA_DIR", "./data"))
 DB_PATH = Path(os.getenv("PQ_DATABASE", str(DATA_DIR / "post_quantam.sqlite3")))
+CA_STATE_PATH = Path(os.getenv("PQ_CA_STATE", str(DATA_DIR / "ca-state.json")))
 AUTH_SECRET = os.getenv("PQ_AUTH_SECRET")
 MASTER_KEY = os.getenv("PQ_MASTER_KEY")
 ADMIN_PASSWORD = os.getenv("PQ_ADMIN_PASSWORD")
